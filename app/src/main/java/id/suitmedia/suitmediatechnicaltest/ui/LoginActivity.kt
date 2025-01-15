@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import id.suitmedia.suitmediatechnicaltest.databinding.ActivityLoginBinding
-import id.suitmedia.suitmediatechnicaltest.utils.PalindromeChecker
+import id.suitmedia.suitmediatechnicaltest.utils.FormatHelper
 
 class LoginActivity : AppCompatActivity() {
 
@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
                     return@setOnClickListener
                 }
 
-                val isPalindrome = PalindromeChecker.isPalindrome(sentence)
+                val isPalindrome = FormatHelper.isPalindrome(sentence)
                 showPalindromeDialog(isPalindrome)
                 this@LoginActivity.isPalindromeChecked = true
                 btnNext.isEnabled = isPalindrome
