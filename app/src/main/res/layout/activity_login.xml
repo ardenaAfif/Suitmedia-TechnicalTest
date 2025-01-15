@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.LoginActivity">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/ic_photo" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="21dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="36dp"
+        android:autofillHints="Name"
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etPalindrome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="Name"
+        android:textColor="@color/black"
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="@string/palindrome"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginTop="32dp"
+        android:padding="12dp"
+        android:textAllCaps="true"
+        android:text="@string/check"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"
+        android:textAllCaps="true"
+        android:enabled="false"
+        android:text="@string/next"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
