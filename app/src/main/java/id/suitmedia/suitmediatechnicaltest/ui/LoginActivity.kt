@@ -42,6 +42,7 @@ class LoginActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (isPalindromeChecked) {
                     val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                    intent.putExtra("name", etName.text.toString())
                     startActivity(intent)
                 }
             }
