@@ -5,7 +5,7 @@
     <string name="check">Check</string>
     <string name="next">Next</string>
     <string name="choose_user">Choose a User</string>
-    <string name="selected_username">Selected User Name</string>
+    <string name="selected_username">No Selected User Name</string>
     <string name="second_screen">Second Screen</string>
     <string name="third_screen">Third Screen</string>
 

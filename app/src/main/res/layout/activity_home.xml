@@ -19,12 +19,12 @@
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:layout_marginTop="21dp"
         android:layout_marginStart="18dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Welcome"
         android:textColor="@color/black"
         android:textSize="14sp"
-        android:fontFamily="@font/poppins_medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
@@ -32,34 +32,84 @@
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Ardena Afif"
+        android:fontFamily="@font/poppins_bold"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:fontFamily="@font/poppins_bold"
         app:layout_constraintStart_toStartOf="@id/tvWelcome"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+        tools:text="Ardena Afif" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        app:cardCornerRadius="10dp"
+        android:visibility="gone"
+        app:cardMaxElevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnChooseUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/ivProfileSelected"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/tvUserNameSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="21sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Name" />
+
+            <TextView
+                android:id="@+id/tvEmailSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="arde@email.com" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tvSelectedUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
+        android:text="@string/selected_username"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCheck"
+        app:layout_constraintBottom_toTopOf="@+id/btnChooseUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tvWelcome"
-        app:layout_constraintTop_toBottomOf="@+id/tvName"
-        android:text="@string/selected_username" />
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
     <Button
-        android:id="@+id/btnCheck"
+        android:id="@+id/btnChooseUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="21dp"
         android:layout_marginBottom="21dp"
-        android:padding="12dp"
         android:fontFamily="@font/poppins_medium"
+        android:padding="12dp"
         android:text="@string/choose_user"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

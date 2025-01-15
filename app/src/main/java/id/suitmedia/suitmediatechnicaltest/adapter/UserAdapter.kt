@@ -25,6 +25,12 @@ class UserAdapter(private val context: Context) :
 
     val differ = AsyncListDiffer(this, diffCallback)
 
+    private var onItemClickListener: ((DataItem) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (DataItem) -> Unit) {
+        onItemClickListener = listener
+    }
+
     inner class UserViewHolder(private val binding: ItemUserBinding) :
     RecyclerView.ViewHolder(binding.root) {
         fun bind(user: DataItem) {
@@ -50,6 +56,9 @@ class UserAdapter(private val context: Context) :
     override fun onBindViewHolder(holder: UserAdapter.UserViewHolder, position: Int) {
         val userList = differ.currentList[position]
         holder.bind(userList)
+        holder.itemView.setOnClickListener {
+            onItemClickListener?.let { it(userList) }
+        }
     }
 
     override fun getItemCount(): Int {

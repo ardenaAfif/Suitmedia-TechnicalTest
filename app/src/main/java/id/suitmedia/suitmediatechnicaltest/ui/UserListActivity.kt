@@ -1,5 +1,6 @@
 package id.suitmedia.suitmediatechnicaltest.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -46,6 +47,12 @@ class UserListActivity : AppCompatActivity() {
 
     private fun setupRv() {
         userAdapter = UserAdapter(this)
+        userAdapter.setOnItemClickListener { user ->
+            val intent = Intent()
+            intent.putExtra("SELECTED_USER", user)
+            setResult(RESULT_OK, intent)
+            finish()
+        }
         binding.rvUser.apply {
             adapter = userAdapter
             layoutManager = LinearLayoutManager(this@UserListActivity)
